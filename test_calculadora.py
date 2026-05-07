@@ -9,14 +9,10 @@ class TestCalculadora(TestCase):
         resultado = calc.sumar(2, 2)
         self.assertEqual(resultado, 4)
 
-    def test_subtracao(self):
-        self.assertEqual(5 - 2, 3)
-
-    def test_multiplicacao(self):
-        self.assertEqual(4 * 3, 12)
-
-    def test_divisao(self):
-        self.assertEqual(10 / 2, 5)
+    def test_ingresa_caracter(self):
+        calc = Calculadora()
+        resultado = calc.sumar('X', 2)
+        self.assertEqual('solo se permiten números', resultado)
 
 
 if __name__ == '__main__':
